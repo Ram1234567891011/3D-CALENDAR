@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3D Full Calendar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>📅 3D Full Calendar</h1>
+  <div class="header">
+    <button onclick="prevMonth()">⬅️</button>
+    <select id="monthSelect"></select>
+    <select id="yearSelect"></select>
+    <button onclick="nextMonth()">➡️</button>
+    <button onclick="goToday()">Today</button>
+    <button onclick="toggleTheme()">🌓</button>
+  </div>
+  <div class="calendar-container">
+    <div class="calendar">
+      <div class="days" id="calendarDays"></div>
+    </div>
+  </div>
+
+  <div class="reminder-box">
+    <h3>🔔 Reminders for <span id="reminderDate">Select a date</span></h3>
+    <input type="text" id="reminderInput" placeholder="Enter reminder...">
+    <button onclick="addReminder()">Add</button>
+    <ul id="reminderList" class="reminder-list"></ul>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

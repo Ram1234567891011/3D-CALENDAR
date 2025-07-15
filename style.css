@@ -1,0 +1,89 @@
+body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #111;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      transition: background 0.3s, color 0.3s;
+    }
+    .calendar-container {
+      perspective: 1000px;
+    }
+    .calendar {
+      background: #1e1e1e;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+      transform-style: preserve-3d;
+      transition: transform 0.5s;
+      max-width: 400px;
+    }
+    .calendar:hover {
+      transform: rotateY(5deg) rotateX(5deg);
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .header select, .header button {
+      background: #333;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+    .days {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 10px;
+    }
+    .day {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 8px;
+      cursor: pointer;
+      background: #222;
+    }
+    .today {
+      background-color: green;
+      color: white;
+    }
+    .event-day {
+      background-color: #444;
+      border: 2px solid yellow;
+    }
+    .light-mode {
+      background-color: #f0f0f0;
+      color: #111;
+    }
+    .light-mode .calendar {
+      background-color: #fff;
+      color: #000;
+    }
+    .light-mode .day {
+      background-color: #ddd;
+      color: #000;
+    }
+    .light-mode .today {
+      background-color: green;
+      color: #fff;
+    }
+    .reminder-box {
+      margin-top: 20px;
+      text-align: left;
+    }
+    .reminder-box input {
+      padding: 5px;
+      margin-bottom: 5px;
+    }
+    .reminder-list {
+      margin-top: 10px;
+    }
